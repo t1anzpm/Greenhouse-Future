@@ -1,0 +1,8 @@
+fastapi
+uvicorn[standard]
+httpx
+pydantic
+sqlalchemy
+alembic       # opcional si querés migraciones
+oracledb      # opcional; solo si vas a conectar Oracle
+python-dotenv

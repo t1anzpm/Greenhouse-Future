@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\app\\dashboard",
+    "\\src\\backend",
+    "\\src\\backend\\.venv",
+    "\\src\\backend\\app",
+    "\\src\\hooks"
+  ],
+  "SelectedNode": "\\src\\hooks\\useSocket.ts",
+  "PreviewInSolutionExplorer": false
+}
