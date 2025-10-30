@@ -2,12 +2,12 @@
   "ExpandedNodes": [
     "",
     "\\src",
+    "\\src\\app",
+    "\\src\\app\\api",
+    "\\src\\app\\api\\sensores",
     "\\src\\app\\dashboard",
-    "\\src\\backend",
-    "\\src\\backend\\.venv",
-    "\\src\\backend\\app",
-    "\\src\\hooks"
+    "\\src\\backend\\.venv"
   ],
-  "SelectedNode": "\\src\\hooks\\useSocket.ts",
+  "SelectedNode": "\\src\\app\\api\\sensores\\route.ts",
   "PreviewInSolutionExplorer": false
 }
