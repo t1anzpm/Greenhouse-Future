@@ -1,22 +1,30 @@
+// src/hooks/useSimulatedSensors.ts
 import { useEffect, useState } from "react";
 
-type SensorData = {
-  temperature: number;
-  humidity: number;
+interface SensorData {
+  temperatura_aire: number;
+  humedad_relativa: number;
+  humedad_suelo: number;
+  luz: number;
+  nivel_agua: number;
   timestamp: string;
-};
+}
 
 export function useSocket() {
-  const [data, setData] = useState<Record<string, any>>({});
+  const [data, setData] = useState<SensorData | null>(null);
+
   useEffect(() => {
-    const ws = new WebSocket("ws://localhost:8000/ws");
-    ws.onmessage = (e) => {
-      const msg = JSON.parse(e.data);
-      if (msg.type === "sensor_update") {
-        setData(prev => ({...prev, [msg.data.device_id]: msg.data}));
-      }
+    const fetchData = async () => {
+      const res = await fetch("/api/sensores");
+      const json = await res.json();
+      setData(json);
     };
-    return () => ws.close();
+
+    fetchData();
+    const interval = setInterval(fetchData, 5000); // Actualiza cada 5s
+
+    return () => clearInterval(interval);
   }, []);
+
   return data;
 }

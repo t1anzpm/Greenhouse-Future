@@ -4,10 +4,8 @@
     "\\src",
     "\\src\\app",
     "\\src\\app\\api",
-    "\\src\\app\\api\\sensores",
-    "\\src\\app\\dashboard",
-    "\\src\\backend\\.venv"
+    "\\src\\app\\api\\sensores"
   ],
-  "SelectedNode": "\\src\\app\\api\\sensores\\route.ts",
+  "SelectedNode": "\\src\\app\\page.tsx",
   "PreviewInSolutionExplorer": false
 }
